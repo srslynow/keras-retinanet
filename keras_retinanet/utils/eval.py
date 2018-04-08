@@ -108,7 +108,7 @@ def _get_detections(generator, model, score_threshold=0.05, max_detections=100, 
         image_predicted_labels = indices[1][scores_sort]
 
         if save_path is not None:
-            draw_annotations(raw_image, generator.load_annotations(i), generator=generator)
+            # draw_annotations(raw_image, generator.load_annotations(i), generator=generator)
             draw_detections(raw_image, detections[0, indices[0][scores_sort], :], generator=generator)
 
             cv2.imwrite(os.path.join(save_path, '{}.png'.format(i)), raw_image)

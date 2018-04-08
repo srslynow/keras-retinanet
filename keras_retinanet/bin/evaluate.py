@@ -34,7 +34,8 @@ from ..preprocessing.pascal_voc import PascalVocGenerator
 from ..preprocessing.csv_generator import CSVGenerator
 from ..utils.keras_version import check_keras_version
 from ..utils.eval import evaluate
-from ..models.resnet import custom_objects
+#from ..models.resnet import custom_objects
+from ..models.mobilenet import custom_objects
 
 
 def get_session():
