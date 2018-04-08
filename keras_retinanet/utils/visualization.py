@@ -77,7 +77,7 @@ def draw_detections(image, boxes, classification, color=None, generator=None, sc
 
         # draw labels
         score   = classification[i, label]
-        caption = (generator.label_to_name(label) if generator else label) + ': {0:.2f}'.format(score)
+        caption = (generator.label_to_name(label) if generator else str(label)) + ': {0:.2f}'.format(score)
         draw_caption(image, boxes[i, :], caption)
 
 
